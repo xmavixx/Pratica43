@@ -5,48 +5,37 @@
  * Exercício de programação em Java.
  * @author Wilson Horstmeyer Bogado <wilson@utfpr.edu.br>
  */
-public class Retangulo {
-    private double base;
-    private double altura;
+public class Retangulo implements FiguraComLados{
+   
+    public double a;
+    public double b;
 
-    public Retangulo() {
-        base = altura = 0;
-    }
-
-    public Retangulo(double base, double altura) {
-        this.base = base;
-        this.altura = altura;
+    public Retangulo(double a, double b) {
+        this.a = a;
+        this.b = b;
     }
 
-    public double getBase() {
-        return base;
+    @Override
+    public double getLadoMenor() {
+
+        return a;
     }
 
-    public void setBase(double base) {
-        this.base = base;
+    @Override
+    public double getLadoMaior() {
+
+        return b;
+
+    }
+    public double getArea(){
+        double area;
+        area = getLadoMenor()*getLadoMaior();
+        return area;
+    }
+    public double getPerimetro(){
+        double Perimetro;
+        Perimetro = 2*getLadoMaior() +2*getLadoMenor();
+        return (Perimetro);
     }
 
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
- 
-    public double getArea() {
-        return base * altura;
-    }
-    
-    public double getPerimetro() {
-        return (base + altura) * 2;
-    }
-    
-    public double getLadoMaior(){  
-        return base;
-    }
-    
-    public double getLadoMenor(){  
-        return altura;
-    }    
 }

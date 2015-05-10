@@ -9,16 +9,31 @@
  * @author Victor
  */
 public class Pratica43 {
-    public static void main(String[] args) {
-        Retangulo r = new Retangulo(4, 2);
-        Quadrado q = new Quadrado(4);
-        TrianguloEquilatero te = new TrianguloEquilatero(4);
-
-        System.out.println("Area do retângulo = " + r.getArea());
-        System.out.println("Perímetro do retângulo = " + r.getPerimetro());
-        System.out.println("Area do quadrado = " + q.getArea());
-        System.out.println("Perímetro do quadrado = " + q.getPerimetro());
-        System.out.println("Area do triângulo = " + te.getArea());
-        System.out.println("Perímetro do triângulo = " + te.getPerimetro());
-    }    
+     
+      
+     
+      private static final Circulo c = new Circulo(2);
+      private static final Elipse e = new Elipse(2,3);
+      private static final TrianguloEquilatero t = new TrianguloEquilatero(2);
+      private static final Retangulo r = new Retangulo(2,3);
+      private static final Quadrado q = new Quadrado(2);
+      
+      
+      
+      
+      public static void main(String[] args){
+          System.out.println("Area da Elipse: " + e.getArea());
+          System.out.println("Perimetro da Elipse: " + e.getPerimetro());
+          System.out.println("Area do Circulo: "+ c.getArea());
+          System.out.println("Perimetro do Cirulo: " + c.getPerimetro());
+          
+          System.out.println("Area do Triangulo: "+ t.getArea());
+          System.out.println("Perimetro do Triangulo: " + t.getPerimetro());
+          
+          System.out.println("Area do Quadrado: "+ q.getArea());
+          System.out.println("Perimetro do Quadrado: " + q.getPerimetro());
+          
+          System.out.println("Area do Retangulo: "+ r.getArea());
+          System.out.println("Perimetro do Retangulo: " + r.getPerimetro());
+      }  
 }

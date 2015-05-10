@@ -5,24 +5,32 @@
  * Exercício de programação em Java.
  * @author Wilson Horstmeyer Bogado <wilson@utfpr.edu.br>
  */
-public class TrianguloEquilatero extends Retangulo {
-
-    public TrianguloEquilatero() {
-        super();
-    }
-
-    public TrianguloEquilatero(double lado) {
-        super(lado, lado * Math.sqrt(3) / 2);
-    }
-
-    @Override
-    public double getArea() {
-        return super.getArea() / 2;
-    }
-
-    @Override
-    public double getPerimetro() {
-        return 3 * getBase();
-    }
+public class TrianguloEquilatero implements FiguraComLados {
+    double a;
+    double h;
     
+    public TrianguloEquilatero(double a){
+    
+    this.a = a;
+    this.h = (a*Math.sqrt(2))/2;
+    
+}
+    @Override
+    public double getLadoMenor(){
+        return a;
+    }
+    @Override
+    public double getLadoMaior(){
+        return h;
+    } 
+    public double getArea(){
+        double Area;
+        Area = (getLadoMenor()*getLadoMaior())/2;
+         return(Area);       
+    }
+    public double getPerimetro(){
+        double Perimetro;
+        Perimetro = 3*getLadoMenor();
+        return (Perimetro);
+    }
 }
