@@ -1,3 +1,10 @@
+
+import utfpr.ct.dainf.if62c.pratica.Retangulo;
+import utfpr.ct.dainf.if62c.pratica.Elipse;
+import utfpr.ct.dainf.if62c.pratica.Circulo;
+import utfpr.ct.dainf.if62c.pratica.TrianguloEquilatero;
+import utfpr.ct.dainf.if62c.pratica.Quadrado;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
